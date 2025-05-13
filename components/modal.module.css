@@ -1,0 +1,144 @@
+.start {
+    display: flex;
+    justify-self: center;
+    width: 25%;
+    border: none;
+    background: green;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-family: inherit;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.start p {
+    text-align: center;
+    width: 100%;
+}
+
+.dialog {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: green;
+    width: 50%;
+    z-index: 50;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.dialog form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.dialog label {
+    text-align: center;
+    margin: 0.3rem 0;
+    color: white;
+    font-size: 1.2rem;
+    font-family: inherit;
+}
+
+.dialog input {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-family: inherit;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.dialog form button {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-family: inherit;
+    border: none;
+    background: rgb(66, 66, 233);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.dialog>button:first-child {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+}
+
+.loader {
+    width: fit-content;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 30px;
+    padding-bottom: 8px;
+    background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+    animation: l2 2s linear infinite;
+    margin: 1rem 0;
+}
+
+.loader:before {
+    content: "Loading...";
+    text-align: center;
+}
+
+@keyframes l2 {
+    to {
+        background-size: 100% 3px
+    }
+}
+
+.story{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 3rem auto 0 auto;
+}
+.story h2{
+    margin-bottom: 1rem;
+    font-family: inherit;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.story p{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+.voice,.error{
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.voice button{
+    margin: 1rem;
+    padding: 0.5rem;
+    border: none;
+    background: green;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-family: inherit;
+}
+.error p{
+    color:red;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-family: inherit;
+}
